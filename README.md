@@ -61,7 +61,7 @@ Ensure your path pointers accurately register your Android SDK setup (edit the `
 
 ```bash
 # Clone the repository
-git clone [https://github.com/yourusername/hybrid-edge-ai-os.git](https://github.com/yourusername/hybrid-edge-ai-os.git)
+git clone [https://github.com/sy17012002/hybrid-edge-ai-os.git](https://github.com/sy17012002/hybrid-edge-ai-os.git)
 cd hybrid-edge-ai-os
 
 # Setup dependencies
