@@ -12,7 +12,7 @@ An enterprise-grade, localized deployment framework utilizing a dual-brain Deep 
 
 The framework orchestrates a closed-loop environment sensing cycle dividing decisions between two deep networks:
 
-                                                                              ```text
+                                                                             
                                              ┌────────────────────────────────────── ───┐
                                              │        Android Device (Via ADB)          │
                                              └────┬─────────────────────────────── ▲────┘
