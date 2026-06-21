@@ -37,13 +37,12 @@ The framework evaluates system optimization targets across dynamic, multi-app us
 ### Core Performance Metrics
 
 | Metric | Baseline (Static OS) | Hybrid AI Engine (Observed Range) |
-| :--- | :--- | :--- | :--- |
-| **App Launch Acceleration** | 0% (Standard) |  **+15.5% to +24.2%** (Avg: ~20.5%) |
-| **Memory Thrashing Mitigation** | 0% (Standard) |  **-80.0% to -100.0%** (Zero-crash stability) |
-| **Next-Context Prediction Accuracy** | ~25.0% (Random)  | **78.4% to 86.1%** (Attention-LSTM) |
+| :--- | :--- | :--- |
+| **App Launch Acceleration** | 0% (Standard Launch Delay) | **+15.5% to +24.2%** (Avg: ~20.5%) |
+| **Memory Thrashing Mitigation** | 0% (Standard Crash Rate) | **-80.0% to -100.0%** (Zero-crash stability) |
+| **Next-Context Prediction Accuracy** | ~25.0% (Random Guess Baseline) | **78.4% to 86.1%** (Attention-LSTM) |
 
 > 📌 **Note on Variance:** The upper bound of App Launch Acceleration is achieved during high-regularity usage windows where the Attention mechanism achieves near-perfect contextual alignment. Conversely, during high-entropy (highly random) user interactions, preloading throttles down to conserve system resources.
----
 
 ## 📁 Repository Contents
 
