@@ -12,16 +12,17 @@ An enterprise-grade, localized deployment framework utilizing a dual-brain Deep 
 
 The framework orchestrates a closed-loop environment sensing cycle dividing decisions between two deep networks:
 
-                              ┌───────────────────────────────────────────────────────── ┐
-                              │               Android Device (Via ADB)                   │
-                              └─────┬───────────────────────────────────────────── ▲─────┘
-                                    │ State:                                       │ Action:
-                                    │ RAM Headroom, Apps Run                       │ Kill / Preload
-                                    ▼                                              │
-                        ┌─────────────────────────┐                   ┌────────────┴────────────┐
-                        │ 🛡️ RL Protector (DQN)   │                   │ 🔮 Oracle Predictor     │
-                        │ Threshold Warning Track │                   │ Deep Context Attention  │
-                        └─────────────────────────┘                   └─────────────────────────┘
+                            ```text
+          ┌─────────────────────────────────────────────────────────┐
+          │               Android Device (Via ADB)                  │
+          └─────┬─────────────────────────────────────────────▲─────┘
+                │ State:                                      │ Action:
+                │ RAM Headroom, Apps Run                      │ Kill / Preload
+                ▼                                             │
+   ┌─────────────────────────┐                   ┌────────────┴────────────┐
+   │ 🛡️ RL Protector (DQN)  │                   │ 🔮 Oracle Predictor     │
+   │ Threshold Warning Track │                   │ Deep Context Attention  │
+   └─────────────────────────┘                   └─────────────────────────┘
 
 
 1. **The Protector (Deep Q-Network):** Constantly audits real-time system RAM consumption via telemetry loops (`dumpsys meminfo`). If headroom scales past a dynamically calculated hazard barrier ($\le 15\%$ available buffer), the DQN dictates high-priority termination vectors to stabilize system performance.
